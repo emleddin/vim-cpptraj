@@ -185,7 +185,8 @@ syn keyword celAssn y ylabel ymin yoffset ystep
 syn keyword celAssn z zlabel zmin zoffset zstep zcut zanglecut
 
 " Deal with out files
-syn match celAssn " out "
+syn match celAssn "\s\+out"
+syn match celAssn "^out"
 
 """""""""""
 " Methods "
@@ -257,36 +258,37 @@ syn keyword celMethod zeromomentum
 " might want name, aspect, idx, ens, dim (32.6.1)
 
 " Deal with netcdf
-syn match celMethod " nc "
+syn match celMethod "\s\+nc"
+syn match celMethod "^nc "
 
 """""""""
 " Highlight common file type keywords if used alone
-syn match celConst " mdcrd"
-syn match celConst " crd"
-syn match celConst " cdf"
-syn match celConst " netcdf"
-syn match celConst " rst"
-syn match celConst " restart"
-syn match celConst " ncrestart"
-syn match celConst " restartnc"
-syn match celConst " dcd"
-syn match celConst " charmm"
-syn match celConst " cor "
-syn match celConst " charmmres"
-syn match celConst " pdb"
-syn match celConst " mol2"
-syn match celConst " binpos"
-syn match celConst " trr"
-syn match celConst " gro"
-syn match celConst " xtc"
-syn match celConst " tng"
-syn match celConst " cif"
-syn match celConst " arc"
-syn match celConst " sqm"
-syn match celConst " sdf"
-syn match celConst " xyz"
-syn match celConst " dtr"
-syn match celConst " conflib"
+syn match celConst "\s\+mdcrd"
+syn match celConst "\s\+crd"
+syn match celConst "\s\+cdf"
+syn match celConst "\s\+netcdf"
+syn match celConst "\s\+rst"
+syn match celConst "\s\+restart"
+syn match celConst "\s\+ncrestart"
+syn match celConst "\s\+restartnc"
+syn match celConst "\s\+dcd"
+syn match celConst "\s\+charmm"
+syn match celConst "\s\+cor "
+syn match celConst "\s\+charmmres"
+syn match celConst "\s\+pdb"
+syn match celConst "\s\+mol2"
+syn match celConst "\s\+binpos"
+syn match celConst "\s\+trr"
+syn match celConst "\s\+gro"
+syn match celConst "\s\+xtc"
+syn match celConst "\s\+tng"
+syn match celConst "\s\+cif"
+syn match celConst "\s\+arc"
+syn match celConst "\s\+sqm"
+syn match celConst "\s\+sdf"
+syn match celConst "\s\+xyz"
+syn match celConst "\s\+dtr"
+syn match celConst "\s\+conflib"
 
 """"""""""
 " Add sometimes words as constants if after a space
@@ -314,6 +316,9 @@ syn match celBad "^remdout"
 syn match celBad "^dihedralscan"
 syn match celBad "^dipole"
 syn match celBad "^mindist"
+
+" Add FIXME and TODO as TODOs as well
+syn keyword celBAD NOTE INFO IDEA TODO FIXME CHANGED XXX BUG HACK TRICKY
 
 """""""""""
 " Specify highlight categories
