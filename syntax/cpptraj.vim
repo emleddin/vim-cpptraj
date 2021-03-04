@@ -308,6 +308,10 @@ syn match celConst " trans"
 " Match atom selection language
 syn match celInd "[:@*]['A-Za-z@0-9,:\-\^\&\=\*\?\|\!<>\%\\]\+"
 
+""""""""
+" Get continuation mark
+syn match celInd "\\$"
+
 """""""""
 " Add now-deprecated and potentially obsolete commands as TODO category
 "syn keyword celBad
