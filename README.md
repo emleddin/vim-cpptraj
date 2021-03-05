@@ -58,3 +58,9 @@ au BufRead,BufNewFile *.traj set filetype=cpptraj
 - More conditional highlighting (after this keyword, expect this)
 - Verify `read`, `write`, `dataset`,  and `change` commands have what they should
 - Check for unintended duplicates (outtraj and pairdist?)
+
+## Related
+- `cpptraj`: https://github.com/Amber-MD/cpptraj
+- `vsc-lang-cpptraj` (VS Code): https://github.com/emleddin/vsc-lang-cpptraj
+- `language-cpptraj` (Atom Editor): https://github.com/emleddin/language-cpptraj
+
